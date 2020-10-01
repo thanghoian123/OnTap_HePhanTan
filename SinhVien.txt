@@ -1,0 +1,6 @@
+SV01;pham manh thang;17/11/1998;CNTT;nam
+SV02;pham manh Loi;17/11/1998;DL;nam
+SV03;pham manh thang;17/11/1998;CNTT;nam
+SV04;pham manh thang;17/11/1998;TC;nam
+SV06;M T;11/17/1998;CNTT;nam
+SV06;tt;11/17/1998;TC;nu
