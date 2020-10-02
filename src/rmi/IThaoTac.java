@@ -7,7 +7,6 @@ package rmi;
 
 import bean.KhoaBean;
 import bean.SinhVienBean;
-import bean.TaiKhoanBean;
 import java.rmi.Remote;
 import java.util.ArrayList;
 
@@ -15,13 +14,16 @@ import java.util.ArrayList;
  *
  * @author Thang
  */
-public interface IThaoTac extends Remote{
-    public ArrayList<KhoaBean> getDSKHoa() throws Exception;
-    public ArrayList<SinhVienBean> getDSSV() throws Exception;
-    public boolean  themSV (SinhVienBean sv) throws Exception;
-    public boolean  suaSV (SinhVienBean sv) throws Exception;
-    public boolean  xoaSV (String masv) throws Exception;
-    public ArrayList<SinhVienBean> timSV(String ma) throws Exception;
-    public ArrayList<SinhVienBean> filterTheoMaK(String ma) throws Exception ;
+public interface IThaoTac extends Remote {
+    public ArrayList<SinhVienBean> getDSSV() throws Exception ;
     
+    public ArrayList<KhoaBean> getListK() throws Exception ;
+    
+    public boolean SuaSV(SinhVienBean sv) throws Exception;
+        
+    
+    public boolean XoaSV(String ma) throws Exception;
+        
+    public boolean themSV(SinhVienBean sv) throws Exception;
+        
 }

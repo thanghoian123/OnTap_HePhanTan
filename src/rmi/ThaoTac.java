@@ -7,10 +7,7 @@ package rmi;
 
 import bean.KhoaBean;
 import bean.SinhVienBean;
-import bean.TaiKhoanBean;
-import dao.KhoaDAO;
-import dao.SinhVienDAO;
-import dao.TaiKhoanDAO;
+import dao.chungDAO;
 import java.rmi.server.UnicastRemoteObject;
 import java.util.ArrayList;
 
@@ -20,49 +17,38 @@ import java.util.ArrayList;
  */
 public class ThaoTac extends UnicastRemoteObject implements IThaoTac{
 
-    public ThaoTac() throws Exception{
-    }
-    KhoaDAO khoa = new KhoaDAO();
-    SinhVienDAO svdao = new SinhVienDAO();
-    @Override
-    public ArrayList<KhoaBean> getDSKHoa() throws Exception {
-        return khoa.getDSKHoa();
-    }
-
+    public ThaoTac() throws Exception{}
+    chungDAO dao = new chungDAO();
     @Override
     public ArrayList<SinhVienBean> getDSSV() throws Exception {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return svdao.getDSSV();
+        return dao.getDSSV();
+    }
+
+    @Override
+    public ArrayList<KhoaBean> getListK() throws Exception {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return dao.getListK();
+    }
+
+    @Override
+    public boolean SuaSV(SinhVienBean sv) throws Exception {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return dao.SuaSV(sv);
+    }
+
+    @Override
+    public boolean XoaSV(String ma) throws Exception {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        return dao.XoaSV(ma);
     }
 
     @Override
     public boolean themSV(SinhVienBean sv) throws Exception {
 //        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return svdao.themSV(sv);
+        return dao.themSV(sv);
     }
-
-    @Override
-    public boolean suaSV(SinhVienBean sv) throws Exception {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return svdao.suaSV(sv);
-    }
-
-    @Override
-    public boolean xoaSV(String masv) throws Exception {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return svdao.xoaSV(masv);
-    }
-
-    @Override
-    public ArrayList<SinhVienBean> timSV(String ma) throws Exception {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return svdao.timSV(ma);
-    }
-
-    @Override
-    public ArrayList<SinhVienBean> filterTheoMaK(String ma) throws Exception {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-        return svdao.filterTheoMaK(ma);
-    }
+    
+    
     
 }

@@ -7,14 +7,14 @@ package rmi;
 
 import java.rmi.Naming;
 import java.rmi.registry.LocateRegistry;
-
-
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Thang
  */
-public class MyServer {
+public class myServer {
     public static void main(String[] args) {
         try {
             ThaoTac tt = new ThaoTac();
@@ -22,8 +22,10 @@ public class MyServer {
             
             Naming.bind("rmi://127.0.0.1/ThaoTac", tt);
             System.out.println("dang doi yeu cau!!!");
-        } catch (Exception e) {
-            e.printStackTrace();
+        } catch (Exception ex) {
+            Logger.getLogger(myServer.class.getName()).log(Level.SEVERE, null, ex);
         }
+        
+        
     }
 }

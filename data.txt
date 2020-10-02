@@ -1,5 +1,0 @@
-thang3;1
-thang2;1
-thang1;123
-thang1;123
-thang1;123

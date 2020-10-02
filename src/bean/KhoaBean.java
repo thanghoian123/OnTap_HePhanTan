@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author Thang
  */
 public class KhoaBean implements Serializable{
-    String maK,tenK;
+    String maK, tenK;
 
     public KhoaBean() {
     }

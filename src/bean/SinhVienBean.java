@@ -6,24 +6,35 @@
 package bean;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  *
  * @author Thang
  */
 public class SinhVienBean implements Serializable{
-    String maSV,hoTen,ngaySinh,maK;
-    boolean gioiTinh;
-
-    public SinhVienBean(String maSV, String hoTen, String ngaySinh, String maK, boolean gioiTinh) {
-        this.maSV = maSV;
-        this.hoTen = hoTen;
-        this.ngaySinh = ngaySinh;
-        this.maK = maK;
-        this.gioiTinh = gioiTinh;
-    }
+    Date ngaySinh ;
+    String maSV,ten,gioiTinh,maK;
+    float dtb;
 
     public SinhVienBean() {
+    }
+
+    public SinhVienBean(Date ngaySinh, String maSV, String ten, String gioiTinh, String maK, float dtb) {
+        this.ngaySinh = ngaySinh;
+        this.maSV = maSV;
+        this.ten = ten;
+        this.gioiTinh = gioiTinh;
+        this.maK = maK;
+        this.dtb = dtb;
+    }
+
+    public Date getNgaySinh() {
+        return ngaySinh;
+    }
+
+    public void setNgaySinh(Date ngaySinh) {
+        this.ngaySinh = ngaySinh;
     }
 
     public String getMaSV() {
@@ -34,20 +45,20 @@ public class SinhVienBean implements Serializable{
         this.maSV = maSV;
     }
 
-    public String getHoTen() {
-        return hoTen;
+    public String getTen() {
+        return ten;
     }
 
-    public void setHoTen(String hoTen) {
-        this.hoTen = hoTen;
+    public void setTen(String ten) {
+        this.ten = ten;
     }
 
-    public String getNgaySinh() {
-        return ngaySinh;
+    public String getGioiTinh() {
+        return gioiTinh;
     }
 
-    public void setNgaySinh(String ngaySinh) {
-        this.ngaySinh = ngaySinh;
+    public void setGioiTinh(String gioiTinh) {
+        this.gioiTinh = gioiTinh;
     }
 
     public String getMaK() {
@@ -58,12 +69,12 @@ public class SinhVienBean implements Serializable{
         this.maK = maK;
     }
 
-    public boolean isGioiTinh() {
-        return gioiTinh;
+    public float getDtb() {
+        return dtb;
     }
 
-    public void setGioiTinh(boolean gioiTinh) {
-        this.gioiTinh = gioiTinh;
+    public void setDtb(float dtb) {
+        this.dtb = dtb;
     }
     
     
